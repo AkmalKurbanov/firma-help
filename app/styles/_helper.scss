@@ -1,0 +1,228 @@
+$tr: all .5s;
+$bc: #000;
+$wc: #fff;
+$gc: #4bc25c;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  //font-family: 'Roboto', sans-serif;
+  @media (max-width: 575.98px) {
+    background-color: #0f2233;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.btn-wrap {
+  z-index: 9999;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+
+  .button {
+    background-color: $gc;
+    max-width: 230px;
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: $wc;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 26px;
+    outline: none !important;
+    position: relative;
+    overflow: hidden;
+    transition: $tr;
+    border: 1px solid $gc;
+    text-decoration: none;
+
+    @media (max-width: 575.98px) {
+      background-color: $gc;
+      color: $wc;
+    }
+
+    &:before, &:after {
+      background-color: $gc;
+      height: 300px;
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 230px;
+      z-index: -2;
+      transition: all 4s ease-in-out;
+      @media (max-width: 575.98px) {
+        display: none;
+      }
+    }
+
+    &:before {
+      top: -60px;
+      left: -230px;
+      transition: all 4s ease-in-out;
+    }
+
+    &:after {
+      top: 54px;
+      left: -34px;
+      width: 250px;
+      transition: all 4s ease-in-out;
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      &:before {
+        transform: translate(250px, 0) rotate(720deg);
+      }
+
+      &:after {
+        transform: translate(0, -140px) rotate(720deg);
+      }
+    }
+
+    &--feedback-btn {
+      background-color: $wc;
+      color: $bc;
+      font-weight: 900;
+      transition: $tr;
+      @media (max-width: 767.98px) {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      &:hover {
+        background-color: rgba(11, 29, 46, 0.69);
+        color: $wc;
+      }
+    }
+  }
+
+  &--agreement {
+    padding: 0 15px;
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+    }
+
+    .button {
+      &:first-child {
+        background-color: #989a9b;
+        color: $wc;
+        border-color: #989a9b;
+        margin-right: 30px;
+        @media (max-width: 575.98px) {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+
+        &:hover {
+          background-color: red;
+          border-color: red;
+
+        }
+      }
+    }
+  }
+}
+
+
+.feedback__content, .footer__content {
+  min-height: 113px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+  }
+}
+
+.social {
+  margin-right: 70px;
+  @media (max-width: 575.98px) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin-right: 5px;
+
+      &last-child {
+        margin: 0;
+      }
+
+      a {
+        transition: $tr;
+
+        i {
+          width: 30px;
+          height: 30px;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          align-items: center;
+          padding: 5px;
+          position: relative;
+          border-radius: 100%;
+          transition: $tr;
+
+          &:after {
+            position: absolute;
+            content: '';
+            width: 40px;
+            height: 40px;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%) scale(0);
+            border: 1px solid $wc;
+            border-radius: 100%;
+            transition: $tr;
+
+          }
+        }
+
+        &:hover {
+
+          i {
+            background-color: $gc;
+
+            &:after {
+              transform: translateY(-50%) translateX(-50%) scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
