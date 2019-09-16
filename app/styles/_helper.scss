@@ -92,6 +92,9 @@ body {
 
     &:hover {
       background-color: transparent;
+      @media (max-width: 575.98px) {
+        background-color: $gc;
+      }
 
       &:before {
         transform: translate(250px, 0) rotate(720deg);

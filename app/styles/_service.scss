@@ -16,6 +16,7 @@
   }
   @media (max-width: 575.98px) {
     background-image: none !important;
+    padding-top: 21px;
   }
 
   .row {
@@ -29,12 +30,15 @@
       margin-bottom: 35px;
     }
     @media (max-width: 575.98px) {
-      margin-bottom: 30px;
+      margin-bottom: 17px;
     }
 
     &:hover {
       .service__source-link-wrap {
         display: flex;
+        @media (max-width: 575.98px) {
+          display: none;
+        }
       }
 
       .service__item {
@@ -69,7 +73,7 @@
     position: relative;
     transition: $tr;
     cursor: pointer;
-    padding: 35px 30px;
+    padding: 37px 30px;
     overflow: hidden;
     @media (max-width: 1199.98px) {
       padding: 25px 20px;
@@ -79,7 +83,7 @@
       min-height: auto;
     }
     @media (max-width: 575.98px) {
-      padding: 20px 20px 25px;
+      padding: 15px 21px;
     }
 
     &:before, &:after {
@@ -117,7 +121,7 @@
 
   &__item-caption-wrap {
     min-height: 45px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     @media (max-width: 1199.98px) {
       margin-bottom: 20px;
     }
@@ -125,14 +129,23 @@
       min-height: auto;
     }
     @media (max-width: 575.98px) {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
   }
 
   &__item-caption {
     font-size: 19px;
     font-weight: 700;
+    line-height: 21px;
     margin: 0;
+    color: $bc;
+    transition: $tr;
+
+    &:hover {
+      color: $gc !important;
+      text-decoration: none;
+    }
+
     @media (max-width: 1199.98px) {
       font-size: 18px;
     }
@@ -145,6 +158,14 @@
       font-weight: 400;
       font-size: 15px;
       margin-bottom: 5px;
+      @media (max-width: 575.98px) {
+        line-height: 18px;
+        margin-bottom: 1px;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
 
       span {
         font-weight: 900;
