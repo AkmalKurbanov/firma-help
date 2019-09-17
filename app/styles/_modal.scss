@@ -23,7 +23,6 @@
     transition: $tr;
     padding: 30px 0 40px;
     @media (max-width: 767.98px) {
-      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -219,6 +218,7 @@
     }
 
     &__description {
+      text-align: left;
       padding: 0 65px 0 100px;
       @media (max-width: 1199.98px) {
         padding: 0 15px 0 50px;
@@ -231,23 +231,85 @@
       }
 
       p {
-        margin-bottom: 45px;
+        margin-bottom: 25px;
         font-size: 16px;
         line-height: 23px;
         color: $bc;
         @media (max-width: 1199.98px) {
-          margin-bottom: 30px;
+          margin-bottom: 20px;
         }
         @media (max-width: 991.98px) {
-          margin-bottom: 20px;
+          margin-bottom: 15px;
         }
         @media (max-width: 767.98px) {
           font-size: 15px;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
         }
         @media (max-width: 575.98px) {
           font-size: 14px;
         }
+      }
+
+      h3 {
+        margin: 20px 0;
+        display: block;
+        font-weight: 700;
+        @media (max-width: 1199.98px) {
+          font-size: 25px;
+        }
+        @media (max-width: 991.98px) {
+          font-size: 20px;
+        }
+        @media (max-width: 767.98px) {
+          font-size: 18px;
+        }
+        @media (max-width: 575.98px) {
+          font-size: 16px;
+          margin: 10px 0;
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      h4 {
+        margin: 20px 0;
+        @media (max-width: 1199.98px) {
+          font-size: 20px;
+        }
+        @media (max-width: 991.98px) {
+          font-size: 18px;
+        }
+        @media (max-width: 767.98px) {
+          font-size: 16px;
+        }
+        @media (max-width: 575.98px) {
+          font-size: 15px;
+          margin: 10px 0;
+        }
+      }
+
+      h5 {
+        margin: 20px 0;
+        @media (max-width: 1199.98px) {
+          font-size: 18px;
+        }
+        @media (max-width: 991.98px) {
+          font-size: 16px;
+        }
+        @media (max-width: 767.98px) {
+          font-size: 15px;
+        }
+        @media (max-width: 575.98px) {
+          font-size: 14px;
+          margin: 10px 0;
+        }
+
+      }
+
+      h4, h5, h6 {
+        font-weight: 700;
       }
     }
   }

@@ -11,14 +11,18 @@
   }
 
   &__text {
-    @media (max-width: 767.98px) {
-      margin-bottom: 20px;
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
-    p {
+    p a {
       font-size: 24px;
       color: $bc;
       margin: 0;
+      text-decoration: none;
+      transition: $tr;
       @media (max-width: 1199.98px) {
         font-size: 20px;
       }
