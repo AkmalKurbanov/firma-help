@@ -1,10 +1,14 @@
+.modal-agree {
+  display: none;
+}
+
 .modal-wrap {
   background-color: rgba(15, 34, 51, 0.83);
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 99999999;
   position: absolute;
   display: flex;
   align-items: center;
@@ -20,7 +24,6 @@
     max-width: 1170px;
     text-align: center;
     position: relative;
-    transition: $tr;
     padding: 30px 0 40px;
     @media (max-width: 767.98px) {
       display: flex;
@@ -128,6 +131,13 @@
         padding-right: 5px;
       }
 
+      .mCSB_scrollTools {
+        width: 20px !important;
+        @media (max-width: 575.98px) {
+          width: 10px !important;
+        }
+      }
+
       .mCSB_container {
         @media (max-width: 575.98px) {
           margin-right: 15px;
@@ -227,7 +237,7 @@
         padding: 0 15px 0 30px;
       }
       @media (max-width: 575.98px) {
-        padding: 0 0 0 15px;
+        padding: 0 10px 0 15px;
       }
 
       p {
@@ -321,4 +331,5 @@
     justify-content: center;
   }
 }
+
 
